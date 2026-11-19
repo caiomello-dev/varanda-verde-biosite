@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #FAF9F5;
+    color: #145317;
+    overflow-x: hidden;
+  }
+}
+
+/* Textura botânica orgânica e iluminação suave de fundo */
+.botanical-bg {
+  background-color: #FAF9F5;
+  background-image:
+    radial-gradient(at 12% 8%, rgba(124, 179, 66, 0.13) 0px, transparent 52%),
+    radial-gradient(at 88% 18%, rgba(245, 155, 101, 0.13) 0px, transparent 50%),
+    radial-gradient(at 50% 85%, rgba(27, 107, 30, 0.07) 0px, transparent 58%),
+    radial-gradient(rgba(27, 107, 30, 0.055) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 24px 24px;
+}
+
+/* Detalhe inspirado nas faixas do vaso terracota da marca */
+.terracotta-stripe-bar {
+  background: linear-gradient(
+    90deg,
+    #1B6B1E 0%,
+    #7CB342 38%,
+    #F59B65 72%,
+    #E8834A 100%
+  );
+}
+
+/* Transições orgânicas respeitando preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
